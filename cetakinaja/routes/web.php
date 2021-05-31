@@ -4,7 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OrdersController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\PrintingsController;
+use App\Http\Controllers\ProductController;
 use App\Http\Middleware\Admin;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,7 +39,10 @@ Route::post('/review', [ReviewController::class, 'create']);
 Route::get('/printing',[PrintingsController::class, 'add']);
 Route::post('/printing',[PrintingsController::class, 'create']);
 
+Route::get('/product',[ProductController::class, 'add']);
+Route::post('/product',[ProductController::class, 'create'])
+
 Route::get('/listreview',[ReviewController::class,'show']);
 Route::get('/listorder',[OrdersController::class,'show']);
 Route::get('/listprinting',[PrintingsController::class,'show']);
-
+Route::get('/listproduct',[ProductController::class,'show']);
