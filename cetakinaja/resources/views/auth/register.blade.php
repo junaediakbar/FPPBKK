@@ -52,6 +52,12 @@
                 <x-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required />
             </div>
 
+            <div class="mt-4">
+                <x-label for="role" :value="__('Role')" />
+
+                <x-input id="role" class="block mt-1 w-full" type="text" name="role" required />
+            </div>
+
             <div class="flex items-center justify-end mt-4">
                 <x-button>
                     {{ __('Register') }}

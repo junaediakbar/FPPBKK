@@ -18,6 +18,7 @@ class AddMoreFieldsToUsersTable extends Migration
             $table->string('lastname');
             $table->string('username');
             $table->string('email')->nullable()->change();
+            $table->integer('role');
         });
     }
 

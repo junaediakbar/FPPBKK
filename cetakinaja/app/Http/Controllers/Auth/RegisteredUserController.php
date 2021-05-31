@@ -38,9 +38,11 @@ class RegisteredUserController extends Controller
             'lastname' => 'required|string|max:255',
             'password' => 'required|string|confirmed|min:8',
             'username' => 'required|string|max:255',
+            'role' => 'required|integer',
         ]);
 
         Auth::login($user = User::create([
+            'role' => $request->role,
             'firstname' => $request->firstname,
             'lastname' => $request->lastname,
             'username' => $request->username,
