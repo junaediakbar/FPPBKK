@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OrdersController;
 use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\PrintingsController;
 use App\Http\Middleware\Admin;
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +34,10 @@ Route::post('/order',[OrdersController::class, 'create']);
 Route::get('/review', [ReviewController::class, 'add']);
 Route::post('/review', [ReviewController::class, 'create']);
 
+Route::get('/printing',[PrintingsController::class, 'add']);
+Route::post('/printing',[PrintingsController::class, 'create']);
+
 Route::get('/listreview',[ReviewController::class,'show']);
 Route::get('/listorder',[OrdersController::class,'show']);
+Route::get('/listprinting',[PrintingsController::class,'show']);
 
