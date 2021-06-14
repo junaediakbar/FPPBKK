@@ -33,8 +33,23 @@
         </form>
 
         <div class="text-end">
-          <button type="button" class="btn btn-outline-light me-2">Login</button>
-          <button type="button" class="btn btn-warning">Sign-up</button>
+
+        @if (Route::has('login'))
+                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                    @auth
+                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Dashboard</a>
+                    @else
+                    <a href="{{ route('login') }}" class="btn btn-outline-light me-2" role="button" data-bs-toggle="button">Login</a>
+
+                        @if (Route::has('register'))
+                        <a href="{{ route('register') }}" class="btn btn-warning" role="button" data-bs-toggle="button">Sign-up</a>
+                        @endif
+                    @endauth
+                </div>
+            @endif
+
+        
+          
         </div>
       </div>
     </div>
