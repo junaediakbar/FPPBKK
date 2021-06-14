@@ -46,3 +46,8 @@ Route::get('/listreview',[ReviewController::class,'show']);
 Route::get('/listorder',[OrdersController::class,'show']);
 Route::get('/listprinting',[PrintingsController::class,'show']);
 Route::get('/listproduct',[ProductController::class,'show']);
+
+
+Route::get('/home', function () {
+    return view('home');
+});

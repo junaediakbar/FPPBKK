@@ -19,8 +19,8 @@
                 </div>
 
                 <div class="mt-4">
-                    <x-label for="L_id" value="{{ __('Id Layanan') }}" />
-                    <x-input id="L_id" class="block mt-1 w-full" type="text" name="L_id" :value="old('L_id')" required />
+                    <x-label for="product_id" value="{{ __('Id Layanan') }}" />
+                    <x-input id="product_id" class="block mt-1 w-full" type="text" name="product_id" :value="old('product_id')" required />
                 </div>
                 <div class="mt-4">
                     <x-label for="nama_layanan" value="{{ __('Nama Layanan') }}" />

@@ -8,7 +8,7 @@ class OrdersController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('pembeli');
     }
     public function add()
     {
@@ -19,7 +19,7 @@ class OrdersController extends Controller
     {
     	$order = new Order();
     	$order->N_id = $request->N_id;
-    	$order->L_id = $request->L_id;
+    	$order->product_id = $request->L_id;
     	$order->nama_layanan = $request->nama_layanan;
     	$order->harga = $request->harga;
     	$order->user_id = auth()->user()->id;

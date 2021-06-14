@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 class ProductController extends Controller
 {
     //
+    public function __construct()
+    {
+        $this->middleware('penjual');
+    }
     public function add()
     {
        return view('addproduct');

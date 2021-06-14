@@ -14,7 +14,7 @@ class CreateProductTable extends Migration
     public function up()
     {
         Schema::create('products', function (Blueprint $table) {
-            $table->bigIncrements('Pr_id');;
+            $table->Increments('Pr_id')->unsigned();
             $table->string('Pr_nama');
             $table->string('Pr_satuan');
             $table->integer('Pr_harga');
