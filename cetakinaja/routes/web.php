@@ -40,7 +40,7 @@ Route::get('/printing',[PrintingsController::class, 'add']);
 Route::post('/printing',[PrintingsController::class, 'create']);
 
 Route::get('/product',[ProductController::class, 'add']);
-Route::post('/product',[ProductController::class, 'create'])
+Route::post('/product',[ProductController::class, 'create']);
 
 Route::get('/listreview',[ReviewController::class,'show']);
 Route::get('/listorder',[OrdersController::class,'show']);
