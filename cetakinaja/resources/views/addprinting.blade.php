@@ -9,7 +9,7 @@
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
-        <form method="POST" action="/order">
+        <form method="POST" action="/printing">
             @csrf
 
             <!-- Name -->
@@ -37,7 +37,7 @@
 
             <div class="flex items-center justify-end mt-4">
                 <x-button>
-                    {{ __('Register') }}
+                    {{ __('Add') }}
                 </x-button>
             </div>
         </form>
