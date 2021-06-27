@@ -51,3 +51,6 @@ Route::get('/listproduct',[ProductController::class,'show']);
 Route::get('/home', function () {
     return view('home');
 });
+
+use App\Http\Controllers\ThirdPaymentController;
+Route::resource('thirdpayment',ThirdPaymentController::class);
