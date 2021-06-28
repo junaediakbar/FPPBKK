@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\User;
 
 class Product extends Model
 {
@@ -15,7 +16,7 @@ class Product extends Model
         'Pr_harga',
         'Pr_satuan',
     ];
-    public function orders(){
-        return $this->hasMany(Order:class,'Pr_id');
-    }
+    
+    protected $primaryKey = 'Pr_id';
+
 }

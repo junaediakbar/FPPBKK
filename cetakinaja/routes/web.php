@@ -39,8 +39,8 @@ Route::post('/order',[OrdersController::class, 'create']);
 Route::get('/printing',[PrintingsController::class, 'add']);
 Route::post('/printing',[PrintingsController::class, 'create']);
 
-Route::get('/product',[ProductController::class, 'add']);
-Route::post('/product',[ProductController::class, 'create']);
+//Route::get('/product',[ProductController::class, 'add']);
+//Route::post('/product',[ProductController::class, 'create']);
 
 Route::get('/listreview',[ReviewController::class,'show']);
 Route::get('/listorder',[OrdersController::class,'show']);
@@ -55,3 +55,5 @@ Route::get('/home', function () {
 use App\Http\Controllers\ThirdPaymentController;
 Route::resource('thirdpayment',ThirdPaymentController::class);
 Route::resource('review',ReviewController::class);
+Route::resource('product',ProductController::class);
+
