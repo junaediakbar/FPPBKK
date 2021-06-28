@@ -24,11 +24,13 @@ Route::post('login',[RegisterController::class,'login']);
 
 use App\Http\Controllers\API\ThirdPaymentController;
 use App\Http\Controllers\API\ReviewController;
+use App\Http\Controllers\API\PrintingController;
 
 
 
 Route::resource('thirdpayment',ThirdPaymentController::class)->only(['index','show']);
 Route::resource('review',ReviewController::class)->only(['index','show']);
+Route::resource('printing',PrintingController::class)->only(['index','show']);
 Route::middleware('auth:sanctum')->group(function () {
     Route::resource('thirdpayment',ThirdPaymentController::class)->except(['index','show']);
 });

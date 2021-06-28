@@ -56,4 +56,5 @@ use App\Http\Controllers\ThirdPaymentController;
 Route::resource('thirdpayment',ThirdPaymentController::class);
 Route::resource('review',ReviewController::class);
 Route::resource('product',ProductController::class);
+Route::resource('printing',PrintingsController::class);
 
