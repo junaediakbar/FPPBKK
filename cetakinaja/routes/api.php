@@ -31,6 +31,7 @@ use App\Http\Controllers\API\PrintingController;
 Route::resource('thirdpayment',ThirdPaymentController::class)->only(['index','show']);
 Route::resource('review',ReviewController::class)->only(['index','show']);
 Route::resource('printing',PrintingController::class)->only(['index','show']);
+Route::resource('product',ProductController::class)->only(['index','show']);
 Route::middleware('auth:sanctum')->group(function () {
     Route::resource('thirdpayment',ThirdPaymentController::class)->except(['index','show']);
 });
