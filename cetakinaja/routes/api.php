@@ -14,6 +14,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+use App\Http\Controllers\API\RegisterController;
+Route::post('register',[RegisterController::class,'register']);
+Route::post('login',[RegisterController::class,'login']);
+
+use App\Http\Controllers\API\ThirdPaymentController;
+
+
+Route::resource('thirdpayment',ThirdPaymentController::class)->only(['index','show']);
+Route::middleware('auth:sanctum')->group(function () {
+    Route::resource('thirdpayment',ThirdPaymentController::class)->except(['index','show']);
 });
