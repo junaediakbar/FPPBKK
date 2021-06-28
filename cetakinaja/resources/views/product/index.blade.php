@@ -1,4 +1,4 @@
-@extends('review.layout')
+@extends('product.layout')
  
 @section('content')
     <div class="row" style="margin-top: 5rem;">
@@ -7,7 +7,7 @@
                 <h2>Review</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('review.create') }}"> Create New Review</a>
+                <a class="btn btn-success" href="{{ route('product.create') }}"> Create New Product</a>
             </div>
         </div>
     </div>
