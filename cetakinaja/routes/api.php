@@ -23,9 +23,12 @@ Route::post('register',[RegisterController::class,'register']);
 Route::post('login',[RegisterController::class,'login']);
 
 use App\Http\Controllers\API\ThirdPaymentController;
+use App\Http\Controllers\API\ReviewController;
+
 
 
 Route::resource('thirdpayment',ThirdPaymentController::class)->only(['index','show']);
+Route::resource('review',ReviewController::class)->only(['index','show']);
 Route::middleware('auth:sanctum')->group(function () {
     Route::resource('thirdpayment',ThirdPaymentController::class)->except(['index','show']);
 });

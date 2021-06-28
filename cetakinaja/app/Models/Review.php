@@ -8,8 +8,12 @@ use App\Models\User;
 
 class Review extends Model
 {
-  public function user()
-  {
-    return $this->belongsTo(User::class);
-  }
+  use HasFactory;
+  protected $table = 'reviews';
+
+  protected $fillable = [
+      'R_id','R_skor', 'R_deskripsi'
+  ];
+  
+  protected $primaryKey = 'R_id';
 }

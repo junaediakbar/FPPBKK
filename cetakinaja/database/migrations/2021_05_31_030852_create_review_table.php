@@ -17,7 +17,7 @@ class CreateReviewTable extends Migration
            $table->bigIncrements('R_id');
            $table->decimal('R_skor');
            $table->string('R_deskripsi');
-           $table->integer('user_id')->unsigned()->index();
+        //    $table->integer('user_id')->unsigned()->index();
            $table->timestamps();
          });
      }

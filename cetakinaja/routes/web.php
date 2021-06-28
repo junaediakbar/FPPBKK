@@ -33,8 +33,8 @@ Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home
 Route::get('/order',[OrdersController::class, 'add']);
 Route::post('/order',[OrdersController::class, 'create']);
 
-Route::get('/review', [ReviewController::class, 'add']);
-Route::post('/review', [ReviewController::class, 'create']);
+// Route::get('/review', [ReviewController::class, 'add']);
+// Route::post('/review', [ReviewController::class, 'create']);
 
 Route::get('/printing',[PrintingsController::class, 'add']);
 Route::post('/printing',[PrintingsController::class, 'create']);
@@ -54,3 +54,4 @@ Route::get('/home', function () {
 
 use App\Http\Controllers\ThirdPaymentController;
 Route::resource('thirdpayment',ThirdPaymentController::class);
+Route::resource('review',ReviewController::class);
